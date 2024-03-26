@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path,include
 from . import views
 
 urlpatterns=[
@@ -10,4 +10,5 @@ urlpatterns=[
     path('branch_table/',views.branch_table_data),
     path('branch-address-table-data/',views.branch_address_table),
     path('branch-contact-data/',views.branch_contact_table)
+   
 ]

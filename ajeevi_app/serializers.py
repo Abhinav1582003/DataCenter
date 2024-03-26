@@ -37,14 +37,15 @@ class branch_contact_serializers(serializers.ModelSerializer):
     class Meta:
         model=branch_contact
         fields='__all__'
-class device_master_table(serializers.ModelSerializer):
+class device_master_table_serializers(serializers.ModelSerializer):
     class Meta:
-        model=device_master_table
+        model=device_master
         fields='__all__'
 class device_part_serializers(serializers.ModelSerializer):
     class Meta:
         model=device_part
         fields='__all__'
 class device_location_serializers(serializers.ModelSerializer):
-    model=device_location
-    fields='__all__'
+    class Meta:
+        model=device_location
+        fields='__all__'

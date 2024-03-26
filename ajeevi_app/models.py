@@ -91,9 +91,9 @@ class branch_contact(models.Model):
         db_table='branch_contact'
 
 
-# device master-table model:
+# device master-table model: 
 
-class device_master_table(models.Model):
+class device_master(models.Model):
     packet_id=models.IntegerField(primary_key=True)
     device_name=models.CharField(max_length=30)
     quantity=models.CharField(max_length=20)
@@ -108,7 +108,7 @@ class device_master_table(models.Model):
 #device part:
 
 class device_part(models.Model):
-    packet_id=models.ForeignKey(device_master_table,on_delete=models.CASCADE,db_column='packet_id')
+    packet_id=models.ForeignKey(device_master,on_delete=models.CASCADE,db_column='packet_id')
     device_id=models.IntegerField(primary_key=True)
     part_1=models.CharField(max_length=50)
     part_2=models.CharField(max_length=50)

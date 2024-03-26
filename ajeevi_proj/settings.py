@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'ajeevidb',
         'PASSWORD':'2003',
         'USER':'postgres',
-        'HOST':'192.168.1.34',
+        'HOST':'192.168.1.11',
         'PORT':'5432',
     }
 }
@@ -129,7 +129,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',  # Replace with the actual origin of your HTML page
-    'null',  # Add 'null' if you're loading the HTML page directly from a file (e.g., file://)
-]
+# # CORS_ALLOWED_ORIGINS = [
+#     # Replace with the actual origin of your HTML page
+#       # Add 'null' if you're loading the HTML page directly from a file (e.g., file://)
+# ]

@@ -16,8 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from rest_framework.routers import DefaultRouter
+from ajeevi_app.views import *
+router = DefaultRouter()
+router.register(r'user-admin', test_data)
+router.register(r'master-table',master_table)
+router.register(r'address-data',address_table)
+router.register(r'entity-type',entity_table)
+router.register(r'contact-data',contact_table)
+router.register(r'branch-table',branch_table)
+router.register(r'branch-address',branchAddress)
+router.register(r'branch-contact',branchContact)
+router.register(r'device-master',DeviceMasterTable)
+router.register(r'device-part',device_part)
+router.register(r'device-location',device_location_table)
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('ajeevi_app.urls'))
+    # path('',include('ajeevi_app.urls')),
+    path('api/', include(router.urls))
+   
 ]
